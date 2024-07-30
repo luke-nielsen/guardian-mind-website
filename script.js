@@ -47,6 +47,11 @@ function donateJoinMailingList(event) {
     }
 }
 
+function decryptData(encryptedData, secretKey) {
+    const bytes = CryptoJS.AES.decrypt(encryptedData, secretKey);
+    return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+}
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     alert("Thank you for your message!");
@@ -54,7 +59,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
     const contactName = document.getElementById('contact-name');
     const contactEmail = document.getElementById('contact-email');
-    const jsonContacts = JSON.parse(localStorage.getItem("contacts")) || [];
+    const jsonContacts = decryptData(localStorage.getItem("contacts"), secretKey);
     jsonContacts.push({
         name : contactName.value,
         email : contactEmail.value,
