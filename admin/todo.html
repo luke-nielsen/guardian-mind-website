@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
 <body>
     <section class="todo">
-        <h2>Todo List</h2>
-        <div>
-            <input type="text" id="input-field" placeholder="Item">
-            <button id="lukebtn">Luke</button>
-            <button id="ethanbtn">Ethan</button>
-            <button id="bothbtn">Both</button>
+        <div class="content-container">
+            <h2>Todo List</h2>
+            <div class="item-assignment">
+                <input type="text" id="input-field" placeholder="Item">
+                <button id="lukebtn">Luke</button>
+                <button id="ethanbtn">Ethan</button>
+                <button id="bothbtn">Both</button>
+            </div>
+            <ul>
+                <li id="todoList"></li>
+            </ul>
+            <button id="archiveBtn">View Archive</button>
         </div>
-        <ul>
-            <li id="todoList"></li>
-        </ul>
     </section>
-    <button id="archiveBtn">View Archive</button>
 </body>
 <script src="./todo.js" defer></script>
 </html>
