@@ -1,3 +1,10 @@
+const secretKey = "j}uu}|!rS'S:,P1PW#aFZhGS8oIB54";
+
+function decryptData(encryptedData, secretKey) {
+    const bytes = CryptoJS.AES.decrypt(encryptedData, secretKey);
+    return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+}
+
 function loadTodo()
 {
     window.location.href = "todo.html";
@@ -6,7 +13,8 @@ function loadTodo()
 function exportContacts() 
 {
     const link = document.createElement("a");
-    const jsonContacts = JSON.parse(localStorage.getItem("contacts")) || [];
+    
+    const jsonContacts = decryptData(localStorage.getItem("contacts"), secretKey);
     let contentArray = [];
     if(jsonContacts[0])
     {
@@ -44,9 +52,9 @@ function exportContacts()
     }
 }
 
-function clearContactList()
+function clearContacts()
 {
-    const jsonContacts = JSON.parse(localStorage.getItem("contacts")) || [];
+    let jsonContacts = JSON.parse(localStorage.getItem("contacts")) || [];
     jsonContacts = [];
     localStorage.setItem("contacts", JSON.stringify(jsonContacts));
 }

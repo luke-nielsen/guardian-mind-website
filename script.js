@@ -4,6 +4,12 @@ function learnMore() {
     alert("Learn more about how we can help you protect your kids online.");
 }
 
+function encryptData(data, secretKey) {
+    return CryptoJS.AES.encrypt(JSON.stringify(data), secretKey).toString();
+}
+const secretKey = "j}uu}|!rS'S:,P1PW#aFZhGS8oIB54";
+
+
 function joinMailingList() {
     const contact = document.getElementById('contact');
     const contactMessage =document.getElementById('contact-message');
@@ -53,7 +59,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         name : contactName.value,
         email : contactEmail.value,
     });
-    localStorage.setItem("contacts", JSON.stringify(jsonContacts));
+    const encryptedData = encryptData(jsonContacts, secretKey);
+    localStorage.setItem("contacts", encryptedData);
     //clear boxes
     contactName.value = "";
     contactEmail.value = "";
