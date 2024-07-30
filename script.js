@@ -54,21 +54,24 @@ function decryptData(encryptedData, secretKey) {
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    alert("Thank you for your message!");
     //save to local storage:
 
     const contactName = document.getElementById('contact-name');
     const contactEmail = document.getElementById('contact-email');
-    const jsonContacts = decryptData(localStorage.getItem("contacts"), secretKey);
-    jsonContacts.push({
-        name : contactName.value,
-        email : contactEmail.value,
-    });
-    const encryptedData = encryptData(jsonContacts, secretKey);
-    localStorage.setItem("contacts", encryptedData);
+    const submitButton = document.getElementById('submit-button');
+    //const jsonContacts = decryptData(localStorage.getItem("contacts"), secretKey);
+    //jsonContacts.push({
+    //    name : contactName.value,
+    //    email : contactEmail.value,
+    //});
+    //const encryptedData = encryptData(jsonContacts, secretKey);
+    //not safe yet
+    //localStorage.setItem("contacts", encryptedData);
     //clear boxes
-    contactName.value = "";
-    contactEmail.value = "";
+    contactName.remove();
+    contactEmail.remove();
+    submitButton.remove();
+    document.getElementById("newsletterSubtitle").innerText = "Thank  You  For  Your  Submission!";
 });
 
 document.getElementById('mobile-menu').addEventListener('click', function() {
