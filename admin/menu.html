@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
     <title>Menu</title>
 </head>
 <body>
-    <p onclick="loadTodo()">ToDo List</p>
-    <button onclick="exportContacts()">Export Contacts</button>
-    <button onclick="clearContacts()">Delete All Contacts</button>
+    <div class="content-container">
+        <p class="paragraph-btn" onclick="loadTodo()">ToDo List</p>
+        <button class="item-btn" onclick="exportContacts()">Export Contacts</button>
+        <button class="item-btn" onclick="clearContacts()">Delete All Contacts</button>
+    </div>
 </body>
 <script src="./menu.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" defer></script>

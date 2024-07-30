@@ -20,9 +20,9 @@ function displayTasks()
         const p = document.createElement("p");
         p.innerHTML = `
             <div class="archive-container">
-                <span id="archive-${index}"">${item.text}</span>
-                <span id="date-${index}"><i>Completed On: ${item.date} </i>By:</span>
-                <img id="icon-${index}" src=" ${users[item.assignedTo]}.webp" alt="${users[item.assignedTo]}" width=30, height=30)">
+                <span class="todo-item" id="archive-${index}"">${item.text}</span>
+                <span class="todo-note" id="date-${index}"><i>Completed On: ${item.date} </i>By:</span>
+                <img class="todo-img" id="icon-${index}" src=" ${users[item.assignedTo]}.webp" alt="${users[item.assignedTo]}" width=30, height=30)">
             </div>
         `;
         archiveList.appendChild(p);

@@ -1,6 +1,6 @@
 body, html {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
     line-height: 1.65;
@@ -38,7 +38,7 @@ body, html {
 
 /* Typography */
 
-h2 h3 {
+h2, h3 {
     color: #FBC343;
 }
 
@@ -52,6 +52,11 @@ h2 h3 {
     border-radius: 4px;
     font-size: 16px;
     font-family: "Plus Jakarta Sans", sans-serif;;
+}
+
+.blue-btn {
+    background-color: #4F9CF9;
+    color: #fff;
 }
 
 .button:hover{
@@ -70,6 +75,7 @@ input {
 }
 
 /* Todo Page */
+ /* layout */
 
 .content-container {
     width: 50vw;
@@ -78,5 +84,85 @@ input {
     padding: 30px;
     border-radius: 8px;
     border: 1px solid #ced0d8;
+}
 
+.todo-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: 1px solid #ced0d8;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.archive-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* styling */
+
+.item-btn, .archive-btn, .back-btn{
+    font-size: 16px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-btn:hover{
+    background-color: #FBC343;
+    color: black;
+}
+
+.archive-btn:hover {
+    background-color: #FBC343;
+    color: black;
+}
+
+.back-btn:hover{
+    background-color: #FBC343;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.todo-checkbox {
+    height: 100%;
+    margin-right: 8px;
+}
+
+.todo-item {
+    color: #FBC343;
+    margin-right: 8px;
+}
+
+.todo-note {
+    margin-right: 8px;
+}
+
+.todo-img {
+    border-radius: 50%;
+
+}
+
+/* Menu Page */
+
+.paragraph-btn {
+    width: fit-content;
+    background-color: #4F9CF9;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.paragraph-btn:hover {
+    background-color: #FBC343;
+    color: black;
 }

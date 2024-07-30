@@ -46,9 +46,9 @@ function displayTasks()
             <div class="todo-container">
                 <input type="checkbox" class="todo-checkbox"
                 id="input-${index}">
-                <span id="todo-${index}" onclick = "editTask(${index})">${item.text}</span>
-                <span id="notes-${index}" onclick = "editNotes(${index})"><i>${item.notes}</i></span>
-                <img id="icon-${index}" src="${users[item.assignedTo]}.webp" alt="${users[item.assignedTo]}" width=30, height=30, onclick = "swapAssignees(${index})">
+                <span class="todo-item" id="todo-${index}" onclick = "editTask(${index})">${item.text}</span>
+                <span class="todo-note" id="notes-${index}" onclick = "editNotes(${index})"><i>${item.notes}</i></span>
+                <img class="todo-img" id="icon-${index}" src="${users[item.assignedTo]}.webp" alt="${users[item.assignedTo]}" width=30, height=30, onclick = "swapAssignees(${index})">
             </div>
         `;
         p.querySelector(".todo-checkbox").addEventListener("change", () => {
