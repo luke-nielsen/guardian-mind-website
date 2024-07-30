@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 1.65;
+    background-color: #181a33;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* login page */
+/* layout */
+
+.login-container {
+    height: 100vh;
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+}
+
+.border {
+    padding: 10vh;
+    text-align: center;
+    background-color: #31324f;
+}
+
+.border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid #ced0d8;
+}
+
+/* Typography */
+
+h2 h3 {
+    color: #FBC343;
+}
+
+
+/* styling */
+
+.button {
+    padding: 10px 25px;
+    background-color: #4F9CF9;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;;
+}
+
+.button:hover{
+    background-color: #FBC343;
+    color: #fff;
+
+}
+
+input {
+    background-color: #ced0d8;
+    font-size: 16px;
+    padding: 8px 5px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 12px;
+}
+
+/* Todo Page */
+
+.content-container {
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #31324f;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ced0d8;
+
+}
