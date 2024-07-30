@@ -54,7 +54,6 @@ function exportContacts()
 
 function clearContacts()
 {
-    let jsonContacts = JSON.parse(localStorage.getItem("contacts")) || [];
-    jsonContacts = [];
+    let jsonContacts = [];
     localStorage.setItem("contacts", JSON.stringify(jsonContacts));
 }
