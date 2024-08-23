@@ -1,83 +1,25 @@
-function learnMore() {
-    alert("Learn more about how we can help you protect your kids online.");
+const mobileMenu = document.getElementById('mobileMenu');
+
+function toggleMenu() {
+    mobileMenu.classList.toggle('active');
 }
 
-//function encryptData(data, secretKey) {
-//    return CryptoJS.AES.encrypt(JSON.stringify(data), secretKey).toString();
-//}
-//const secretKey = "j}uu}|!rS'S:,P1PW#aFZhGS8oIB54";
+function menuRemove() {
+    mobileMenu.classList.remove('active');
+  }
 
+  function navigateHome() {
+
+  }
 
 function joinMailingList() {
-    const contact = document.getElementById('contact');
-    contact.scrollIntoView({ behavior: 'smooth' });
+    var textarea = document.getElementById('contact-message');
+    textarea.placeholder = 'I want to join the mailing list!';
+  }
+
+  window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('joinMailingList') === 'true') {
+        joinMailingList();
+    }
 }
-function storyView() {
-    const contact = document.getElementById('story');
-    contact.scrollIntoView({ behavior: 'smooth' });
-}
-
-function navJoinMailingList(event) {
-    event.preventDefault();
-    const contact = document.getElementById('contact');
-    contact.scrollIntoView({ behavior: 'smooth' });
-}
-
-function goToDonatePage(event) {
-    event.preventDefault();
-    const donatePage = 'donate.html'
-    window.location.href = donatePage;
-}
-
-function goToHomePage(event) {
-    event.preventDefault();
-    const homePage = 'index.html'
-    window.location.href = homePage;
-}
-
-function donateJoinMailingList(event) {
-    event.preventDefault();
-    const mailingListPage = 'index.html#contact'
-    window.location.href = mailingListPage;
-}
-
-function decryptData(encryptedData, secretKey) {
-    const bytes = CryptoJS.AES.decrypt(encryptedData, secretKey);
-    return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
-}
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const contactName = document.getElementById('contact-name');
-    const contactEmail = document.getElementById('contact-email');
-    const submitButton = document.getElementById('submit-button');
-    //const jsonContacts = decryptData(localStorage.getItem("contacts"), secretKey);
-    //jsonContacts.push({
-    //    name : contactName.value,
-    //    email : contactEmail.value,
-    //});
-    //const encryptedData = encryptData(jsonContacts, secretKey);
-    //not safe yet
-    //localStorage.setItem("contacts", encryptedData);
-    //clear boxes
-    contactName.remove();
-    contactEmail.remove();
-    submitButton.remove();
-    document.getElementById("newsletterSubtitle").innerText = "Thank  You  For  Your  Submission!";
-});
-
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    const navList = document.getElementById('nav-links');
-    navList.classList.toggle('active');
-});
-
-document.getElementById('nav-links').addEventListener('click', function() {
-    const navList = document.getElementById('nav-links');
-    navList.classList.toggle('active')
-});
-
-//document.getElementById('donate-logo').addEventListener('click', goToHomePage())
-
-// document.getElementById('contact-nav-link').addEventListener('click', joinMailingList())
-
-// document.getElementById('donate-nav-link').addEventListener('click', goToDonatePage())

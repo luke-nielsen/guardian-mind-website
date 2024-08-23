@@ -3,160 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The company GuardedMind creates accountability laptops that allow parents to protect their children online">
+    <meta name="keywords" content="children, accountability, laptop">
+    <meta name="author" content="GuardedMind">
+    <meta property="og:title" content="GuardedMind">
+    <meta property="og:description" content="The company GuardedMind creates accountability laptops that allow parents to protect their children online"> 
+    <meta property="og:url" content="https://www.guardedmind.com/index.html">
+    <meta property="og:type" content="website"> 
+    <meta name="twitter:title" content="GuardedMind">
+    <meta name="twitter:description" content="The company GuardedMind creates accountability laptops that allow parents to protect their children online">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "GuardedMind",
+          "description": "The company GuardedMind creates accountability laptops that allow parents to protect their children online",
+          "url": "https://www.guardedmind.com/index.html"
+        }
+    </script>
+    <meta name="robots" content="index, follow"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">     
     <title>Guardian Mind</title>
+    <link rel="canonical" href="https://www.guardedmind.com/index.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Navbar -->
+
     <header>
-        <nav class="navbar">
-            <div class="nav-container">
-            <div class="logo">GuardianMind</div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li class="nav-link"><a href="#story">About</a></li>
-                <li class="nav-link"><a href="blog.html">Blog</a></li>
-                <li class="nav-link"><a href="#contact">Contact</a></li>
-                <li id="contact-nav-link" class="nav-link"><a onclick="navJoinMailingList(event); return false"><span class="waitlist-button">Join Mailing List</span></a></li>
-                <li id="donate-nav-link" class="nav-link"><a onclick="goToDonatePage(event); return false"><span class="donate-button">Pre-Order</span></a></li>
-            </ul>
-            </div>
-        </nav>
+        <!-- Nav Bar -->
+        <div class="nav-container">
+            <div class="logo-element"><a class="logo" href="#hero">GuardedMind</a></div>
+            <nav class="nav-bar">
+                <!-- Hamburger Icon -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="regular-menu nav-list">
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item"><a href="#products">Products</a></li>
+                    <li class="nav-item"><a href="#">Resources</a></li>
+                    <li class="nav-item blue-btn nav-btn"><a href="#contact">Join Mailing List</a></li>
+                    <li class="nav-item yellow-btn nav-btn"><a href="#products">Pre-Order</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>We help non-tech parents protect their kids online.</h1>
-            <button class="hero-button" onclick="storyView()">Our Story</button>
-        </div>
-        <div class="hero-image">
-            <img src="images/hero-monitor.png" alt="Hero Image">
-        </div>
-    </section>
-        
-    <!-- About Section -->
-    <section id="story">
-        <div class="story-container">
-            <div class="story-container-text">
-                <h2>Why we do what we do</h2>
-                <!-- <p class="important-text">Here is <i>why</i> we are dedicated to protecting the next generation.</p> -->
-                <div class="testimonies">
-                    <iframe id="ethans-testimony" src="https://youtu.be/_CmD0Qf1F5w?si=-wL8PeMRlHDAuEPC" title="Ethan's Testimony"></iframe>
-                    <iframe id="lukes-testimony" src="https://youtu.be/_CmD0Qf1F5w?si=-wL8PeMRlHDAuEPC" title="Luke's Testimony"></iframe>
-                    <p id="heart-story">Our Heart</p>
+    <!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="#about" onclick="menuRemove()">About</a></li>
+        <li class="nav-item"><a href="#products" onclick="menuRemove()">Products</a></li>
+        <li class="nav-item"><a href="#" onclick="menuRemove()">Resources</a></li>
+        <li class="nav-item blue-btn block-btn nav-btn"><a id="nav-join-mailing-list" href="#contact" onclick="joinMailingList(), menuRemove()">Join Mailing List</a></li>
+        <li class="nav-item yellow-btn block-btn nav-btn"><a href="#products" onclick="menuRemove()">Pre-Order</a></li>
+    </ul>
+</nav>
+
+    <main> 
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container gradient-blue fullscreen hero">
+                <div class="left-content">
+                    <h1>Accountability Laptops for Non-Tech Parents</h1>
+                    <p>We do the technology so you can do the relationship.</p>
+                    <a class="yellow-btn" href="#products">Pre-Order</a>
+                </div>
+                <div class="right-content">
+                    <img class="hero-image" src="images/hero.png" alt="A Laptop">
                 </div>
             </div>
-        </div>
-        <div class="info-boxes" id="about-info-boxes">
-            <div class="about-info-box info-box">
-                <p>Tech companies create devices that are designed to hook your kids</p>
-            </div>
-            <div class="info-box">
-                <p>Most internet filters are horribly ineffective and insecure</p>
-            </div>
-            <div class="about-info-box info-box">
-                <p>Harmful content is nearly impossible to avoid on the internet</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="about-container">
-            <div class="about-container-text">
-                <h2>Why Guardian Mind?</h2>
-                <p class="important-text">All you want is for your child to be safe online, but it feels like the entire world is working against you.</p>
-                <div class="hidden-info-boxes">
-                    <div class="about-info-box info-box">
-                        <p>Tech companies create devices that are designed to hook your kids</p>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container white fullscreen">
+                <div class="right-content">
+                    <h2>Why Accountability Laptops?</h2>
+                    <p>All you want is for your child to be safe online, but it probably feels like the entire world is working against you. </p>
+                    <div class="card-container">
+                        <div class="card">The chances of a child getting exposed to pornography online is nearly guaranteed.</div>
+                        <div class="card">Cyberbullying happens on platforms as innocent as Google Docs.</div>
+                        <div class="card">Addictive tendencies are easily developed.</div>
                     </div>
-                    <div class="about-info-box info-box">
-                        <p>Most internet filters are horribly ineffective and insecure</p>
+                    <a href="#paragraph" class="blue-btn">Learn More</a>
+                </div>
+                <div class="left-content">
+                    <img class="visibility" src="images/about.png" alt="Father and Son">
+                </div>
+            </div>
+        </section>
+
+        <!-- Tansition Section -->
+        <section>
+            <div class="container blue fit-content">
+                <div class="text">In this day in age, it’s a high risk to look the other way and hope for the best.</div>
+                <br>
+                <div class="text">That’s why we build  GuardedMind Accountability Laptops.</div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section id="how-it-works">
+            <div class="container white fullscreen">
+                <h2>How It Works</h2>
+                <div class="card-container">
+                    <div class="card">Every minute, you receive a new screenshot of your child’s laptop.</div>
+                    <div class="card">Quickly scroll through the app whenever you want. You no longer have to  spend the entire day as “device police."</div>
+                    <div class="card">The software is built into the computer, making it nearly impossible to workaround. You never have to worry again about what is happening on their screen.</div>
+                </div>
+                <a class="yellow-btn" href="#products">Pre-Order</a>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="story">
+            <div class="container blue fullscreen">
+                <h2>Our Story</h2>
+                <div class="text">We know you’ve been losing sleep over the safety of your children.</div>
+                <div class="text">We have too.</div>
+                <img src="images/story.png" alt="Two College Guys">
+                <p>GuardedMind was founded by two college guys who decided enough was enough. We’re tired of the Porn Industry taking advantage of young and vulnerable minds and we believe these minds deserve our best protection.</p>
+                <p>So, we brought on a development team whose been working in the tech industry for over 20 years to create the best possible technology to keep your children safe. </p>
+            </div>
+        </section>
+
+        <!-- Success Plan Section -->
+        <section id="success-plan">
+            <div class="container white fullscreen ">
+                <h2>Success Plan</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h4>1. Order</h4>
+                        <div>No commitments. Try it out for a month and if it doesn't work, send it back on us.</div>
                     </div>
-                    <div class="about-info-box info-box">
-                        <p>Harmful content is nearly impossible to avoid on the internet</p>
+                    <div class="card">
+                        <h4>2. Receive Snapshots</h4>
+                        <div>Receive a snapshot for every minute your child has been on the computer.</div>
+                    </div>
+                    <div class="card">
+                        <h4>3. Breathe Easy</h4>
+                        <div>Never worry again about what’s happening on their screen.</div>
+                    </div>
+                </div>
+                <div class="centered-container">
+                    <a class="blue-btn" onclick="joinMailingList()" href="#contact">Join Mailing List</a>
+                    <a class="yellow-btn" href="#products">Pre-Order</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paragraph Section -->
+        <section id="paragraph">
+            <div class="container blue fullscreen">
+                <p>At GuardedMind, we know how heartbreaking it is to desperately want to protect your kids, but feel like the entire world is working against you in this pursuit. Tech, social media, and porn companies are all gained up to exploit your children as much as possible  even from a young age. Accountability software has easy workarounds, and devices with reliable parental controls are nearly impossible to find, leaving you to feel helpless. We believe innocent minds deserve our best protection, that’s why we built the GuardedMind Accountability Laptop. All you need to do is order it, quickly set up your accounts, then breathe a sigh of relif as you never have to wonder what is happening on your child’s screen. So order today so you no longer have worry and can now have the peace of knowing your child is safe online. </p>
+            </div>
+        </section>
+
+        <!-- Laptops Section -->
+        <section id="products">
+            <div class="container white fullscreen">
+                <h2>GuardedMind Accountability Laptops</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <!-- <img src="#" alt="Budget Model"> -->
+                        <h4>Budget Model</h4>
+                        <ul class="description">
+                            <li>Refurbished Chrome Book with Protective Software</li>
+                            <li>Great for School Use</li>
+                        </ul>
+                        <div class="button-box">
+                            <a href="#how-it-works" class="blue-btn">Learn More</a>
+                            <a href="order.html" class="yellow-btn">Pre-Order</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <img src="#" alt="Standard Model"> -->
+                        <h4>Standard Model</h4>
+                        <ul class="description">
+                            <li>New Chrome Book with Protective Software</li>
+                            <li>Great for school use</li>
+                        </ul>
+                        <div class="button-box">
+                            <a href="#how-it-works" class="blue-btn">Learn More</a>
+                            <a href="order.html" class="yellow-btn">Pre-Order</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <img src="#" alt="Specialized Model"> -->
+                        <h4>Specialized Model</h4>
+                        <ul class="description">
+                            <li>High-performance laptop with Protective Software</li>
+                            <li>Great for kids who need performance computing capabilites</li>
+                        </ul>
+                        <div class="button-box">
+                            <a href="#how-it-works" class="blue-btn">Learn More</a>
+                            <a href="order.html" class="yellow-btn">Pre-Order</a>
+                        </div>
                     </div>
                 </div>
             </div>
-                <img class="about-img" src="images/about-image.png" alt="father and son">
-        </div>
-        <div class="info-boxes" id="about-info-boxes">
-            <div class="about-info-box info-box">
-                <p>Tech companies create devices that are designed to hook your kids</p>
-            </div>
-            <div class="info-box">
-                <p>Most internet filters are horribly ineffective and insecure</p>
-            </div>
-            <div class="about-info-box info-box">
-                <p>Harmful content is nearly impossible to avoid on the internet</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Small Section -->
-    <section class="small-section mission-section">
-        <p class="important-text mission-text">We want to equip you with the best possible technology to keep your kid safe online</p>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products">
-        <h2>Our Product</h2>
-        <h4 class="important-text">Imagine a laptop with the same transparency as a living room TV</h4>
-        <div class="info-boxes">
-            <div class="info-box product-info-box">
-                <h3>Total Transparency</h3>
-                <p>Every ten to twenty seconds your interface receives a new image of the laptop’s screen</p>
+        <!-- Transition Section -->
+        <section>
+            <div class="container blue fit-content">
+                <p>Join the mailing list to get updates on upcoming products and offers</p>
+                <a href="#contact" class="blue-btn" onclick="joinMailingList()">Join Mailing List</a>
             </div>
-            <div class="info-box product-info-box">
-                <h3>Digital Discipline</h3>
-                <p>Build digital discipline instead of postponing addictions</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <div class="container white fullscreen">
+                <div class="left-content">
+                    <h2>Contact Us</h2>
+                    <p>Feel free to reach out. We love to hear from you!</p>
+                    <form id="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
+                    <input class="form" id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
+                    <input class="form" id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
+                    <textarea class="form" id="contact-message" name="message" placeholder="Your Message" class="message" required></textarea>
+                    <button type="submit" class="blue-btn block-btn">Send</button>
+                </form>
+                </div>
+                <div class="right-content">
+                    <img src="images/contact.png" alt="A man talking on the phone">
+                </div>
             </div>
-            <div class="info-box product-info-box">
-                <h3>Relational</h3>
-                <p>Relies on relational accountability instead of filters</p>
-            </div>
-        </div>
-        <div class="white-space"></div>
-    </section>
+        </section>
 
-    <!-- Small Section with Button -->
-    <section class="small-section mailing-list-section" >
-        <p class="important-text">Stay updated with our latest news and updates. Join our mailing list now!</p>
-        <br>
-        <button onclick="joinMailingList()">Join Mailing List</button>
-    </section>
+    </main>
 
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Subscribe to our newsletter!</h2>
-        <h4 id="newsletterSubtitle"></h4>
-        <p></p>
-        <form id="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
-            <input id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
-            <input id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
-<!--             <textarea id="contact-message" name="message" placeholder="Your Message" class="message" required></textarea> -->
-            <button id="submit-button" type="submit">Submit</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <p class="footer-text">&copy; 2024 <span>GuardianMind LLC.</span> All rights reserved.</p>
-            <p class="footer-text"><span>team@guardedmind.com</span></p>
-            <a class="citation "href="https://storyset.com/technology">Technology illustrations by Storyset</a></div>
+        <div class="container blue fit-content"><div class="right-content"> 
+            <p class="footer-text">&copy; 2024 <span>GuardianMind LLC.</span> All rights reserved.</p></div>
+            <p class="footer-text">Contact Us: team@guardedmind.com</p>
+            <div class="left-content"><a class="citation "href="https://storyset.com/technology">Technology illustrations by Storyset</a></div></div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
 </body>
 </html>
