@@ -44,8 +44,7 @@ function displayTasks()
         const p = document.createElement("p");
         p.innerHTML = `
             <div class="todo-container">
-                <input type="checkbox" class="todo-checkbox"
-                id="input-${index}">
+                <input type="checkbox" class="todo-checkbox" id="input-${index}">
                 <span class="todo-item" id="todo-${index}" onclick = "editTask(${index})">${item.text}</span>
                 <span class="todo-note" id="notes-${index}" onclick = "editNotes(${index})"><i>${item.notes}</i></span>
                 <img class="todo-img" id="icon-${index}" src="${users[item.assignedTo]}.webp" alt="${users[item.assignedTo]}" width=30, height=30, onclick = "swapAssignees(${index})">

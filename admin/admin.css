@@ -134,8 +134,12 @@ ul {
 }
 
 .todo-checkbox {
-    height: 100%;
+    height: 20px;
     margin-right: 8px;
+}
+
+.todo-checkbox:hover {
+    background-color: #FBC343;
 }
 
 .todo-item {
