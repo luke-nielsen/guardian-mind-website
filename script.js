@@ -1,28 +1,26 @@
-const globalContactMessage =document.getElementById('contact-message');
-
 function learnMore() {
     alert("Learn more about how we can help you protect your kids online.");
 }
 
-function encryptData(data, secretKey) {
-    return CryptoJS.AES.encrypt(JSON.stringify(data), secretKey).toString();
-}
-const secretKey = "j}uu}|!rS'S:,P1PW#aFZhGS8oIB54";
+//function encryptData(data, secretKey) {
+//    return CryptoJS.AES.encrypt(JSON.stringify(data), secretKey).toString();
+//}
+//const secretKey = "j}uu}|!rS'S:,P1PW#aFZhGS8oIB54";
 
 
 function joinMailingList() {
     const contact = document.getElementById('contact');
-    const contactMessage =document.getElementById('contact-message');
     contact.scrollIntoView({ behavior: 'smooth' });
-    contactMessage.placeholder = 'I want to join the mailing list!'
+}
+function storyView() {
+    const contact = document.getElementById('story');
+    contact.scrollIntoView({ behavior: 'smooth' });
 }
 
 function navJoinMailingList(event) {
     event.preventDefault();
     const contact = document.getElementById('contact');
-    const contactMessage =document.getElementById('contact-message');
     contact.scrollIntoView({ behavior: 'smooth' });
-    contactMessage.placeholder = 'I want to join the mailing list!'
 }
 
 function goToDonatePage(event) {
@@ -41,10 +39,6 @@ function donateJoinMailingList(event) {
     event.preventDefault();
     const mailingListPage = 'index.html#contact'
     window.location.href = mailingListPage;
-    window.onload = function() {
-        const contactMessage = document.getElementById('contact-message');
-        contactMessage.placeholder = 'I want to join the mailing list!'
-    }
 }
 
 function decryptData(encryptedData, secretKey) {
@@ -54,8 +48,6 @@ function decryptData(encryptedData, secretKey) {
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    //save to local storage:
-
     const contactName = document.getElementById('contact-name');
     const contactEmail = document.getElementById('contact-email');
     const submitButton = document.getElementById('submit-button');
