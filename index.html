@@ -48,8 +48,8 @@
                     <li class="nav-item"><a href="#about">About</a></li>
                     <li class="nav-item"><a href="#products">Products</a></li>
                     <li class="nav-item"><a href="#">Resources</a></li>
-                    <li class="nav-item blue-btn nav-btn"><a href="#contact">Join Mailing List</a></li>
-                    <li class="nav-item yellow-btn nav-btn"><a href="#products">Pre-Order</a></li>
+                    <li class="nav-item nav-blue-btn nav-btn"><a href="#contact">Join Mailing List</a></li>
+                    <li class="nav-item nav-yellow-btn nav-btn"><a href="#products">Pre-Order</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,8 +61,8 @@
         <li class="nav-item"><a href="#about" onclick="menuRemove()">About</a></li>
         <li class="nav-item"><a href="#products" onclick="menuRemove()">Products</a></li>
         <li class="nav-item"><a href="#" onclick="menuRemove()">Resources</a></li>
-        <li class="nav-item blue-btn block-btn nav-btn"><a id="nav-join-mailing-list" href="#contact" onclick="joinMailingList(), menuRemove()">Join Mailing List</a></li>
-        <li class="nav-item yellow-btn block-btn nav-btn"><a href="#products" onclick="menuRemove()">Pre-Order</a></li>
+        <li class="nav-item nav-blue-btn block-btn nav-btn"><a id="nav-join-mailing-list" href="#contact" onclick="joinMailingList(), menuRemove()">Join Mailing List</a></li>
+        <li class="nav-item nav-yellow-btn block-btn nav-btn"><a href="#products" onclick="menuRemove()">Pre-Order</a></li>
     </ul>
 </nav>
 
@@ -73,7 +73,7 @@
             <div class="container gradient-blue fullscreen hero">
                 <div class="left-content">
                     <h1>Accountability Laptops for Non-Tech Parents</h1>
-                    <p>We do the technology so you can do the relationship.</p>
+                    <div class=sub-title>We do the technology so you can do the relationship.</div>
                     <a class="yellow-btn" href="#products">Pre-Order</a>
                 </div>
                 <div class="right-content">
@@ -112,7 +112,7 @@
 
         <!-- How it Works Section -->
         <section id="how-it-works">
-            <div class="container white fullscreen">
+            <div class="container white">
                 <h2>How It Works</h2>
                 <div class="card-container">
                     <div class="card">Every minute, you receive a new screenshot of your child’s laptop.</div>
@@ -125,19 +125,22 @@
 
         <!-- Our Story Section -->
         <section id="story">
-            <div class="container blue fullscreen">
-                <h2>Our Story</h2>
-                <div class="text">We know you’ve been losing sleep over the safety of your children.</div>
-                <div class="text">We have too.</div>
-                <img src="images/story.png" alt="Two College Guys">
-                <p>GuardedMind was founded by two college guys who decided enough was enough. We’re tired of the Porn Industry taking advantage of young and vulnerable minds and we believe these minds deserve our best protection.</p>
-                <p>So, we brought on a development team whose been working in the tech industry for over 20 years to create the best possible technology to keep your children safe. </p>
+            <div class="container blue content-fullscreen">
+                <div class="left-content"><h2>Our Story</h2>
+                    <div class="text">We know you’ve been losing sleep over the safety of your children.</div>
+                    <div class="text">We have too.</div>
+                    <p>GuardedMind was founded by two college guys who decided enough was enough. We’re tired of the Porn Industry taking advantage of young and vulnerable minds and we believe these minds deserve our best protection.</p>
+                    <p>So, we brought on a development team whose been working in the tech industry for over 20 years to create the best possible technology to keep your children safe. </p>
+                </div>
+                <div class="right-content">
+                    <img src="images/story.png" alt="Two College Guys">
+                </div>
             </div>
         </section>
 
         <!-- Success Plan Section -->
         <section id="success-plan">
-            <div class="container white fullscreen ">
+            <div class="container white">
                 <h2>Success Plan</h2>
                 <div class="card-container">
                     <div class="card">
@@ -162,14 +165,14 @@
 
         <!-- Paragraph Section -->
         <section id="paragraph">
-            <div class="container blue fullscreen">
+            <div class="container blue">
                 <p>At GuardedMind, we know how heartbreaking it is to desperately want to protect your kids, but feel like the entire world is working against you in this pursuit. Tech, social media, and porn companies are all gained up to exploit your children as much as possible  even from a young age. Accountability software has easy workarounds, and devices with reliable parental controls are nearly impossible to find, leaving you to feel helpless. We believe innocent minds deserve our best protection, that’s why we built the GuardedMind Accountability Laptop. All you need to do is order it, quickly set up your accounts, then breathe a sigh of relif as you never have to wonder what is happening on your child’s screen. So order today so you no longer have worry and can now have the peace of knowing your child is safe online. </p>
             </div>
         </section>
 
         <!-- Laptops Section -->
         <section id="products">
-            <div class="container white fullscreen">
+            <div class="container white">
                 <h2>GuardedMind Accountability Laptops</h2>
                 <div class="card-container">
                     <div class="card">
@@ -222,14 +225,14 @@
 
         <!-- Contact Us Section -->
         <section id="contact">
-            <div class="container white fullscreen">
+            <div class="container white content-fullscreen">
                 <div class="left-content">
                     <h2>Contact Us</h2>
                     <p>Feel free to reach out. We love to hear from you!</p>
                     <form id="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
                     <input class="form" id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
                     <input class="form" id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
-                    <textarea class="form" id="contact-message" name="message" placeholder="Your Message" class="message" required></textarea>
+                    <textarea class="form contact-message" id="contact-message" name="message" placeholder="Your Message" class="message" required></textarea>
                     <button type="submit" class="blue-btn block-btn">Send</button>
                 </form>
                 </div>
