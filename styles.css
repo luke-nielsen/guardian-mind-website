@@ -23,7 +23,7 @@ img {
 }
 
 input, textarea, select {
-    min-width: 250px;
+    max-width: 350px;
     font-size: 16px;
     border: none;
     margin: 5px 5px 5px 0px;
@@ -132,6 +132,17 @@ footer {
 
 .sub-title {
     margin-top: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-text {
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 
@@ -306,6 +317,11 @@ nav-btn a:hover{
         padding-left: 20px;
     }
 
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+    }
+
     .hero {
         padding-top: 170px;
         padding-left: 40px;
@@ -352,6 +368,11 @@ nav-btn a:hover{
   .yellow-btn {
     padding: 8px 16px;
     margin-top: 10px;
+}
+
+#form-btn {
+        padding: 10px 20px;
+       font-size: 20px;
 }
 
 .sub-title {
@@ -403,7 +424,7 @@ nav-btn a:hover{
 
     h1 {
         font-size: 90px;
-        color: green;
+        /* color: green; */
         line-height: 1.2;
     }
 
@@ -416,23 +437,22 @@ nav-btn a:hover{
     }
 
     input, textarea, select {
-        min-width: 300px;
+        max-width: 550px;
         font-size: 20px;
         border: none;
         padding: 16px;
         font-family: "Plus Jakarta Sans", sans-serif;;
     }
-
-    .contact-message {
-        min-width: 500px;
-    }
-    
-
     
     /* Layout */
 
     .container {
         padding: 60px 80px 60px 80px;
+    }
+
+    .footer-container {
+    padding: 40px 80px; 
+    padding-top: none;
     }
 
     .fullscreen {
@@ -442,6 +462,13 @@ nav-btn a:hover{
         justify-content: space-between;
         align-items: center;
 
+    }
+
+    .footer-fullscreen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .content-fullscreen {

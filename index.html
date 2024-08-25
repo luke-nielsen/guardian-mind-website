@@ -229,11 +229,11 @@
                 <div class="left-content">
                     <h2>Contact Us</h2>
                     <p>Feel free to reach out. We love to hear from you!</p>
-                    <form id="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
+                    <form id="contact-form" class="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
                     <input class="form" id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
                     <input class="form" id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
                     <textarea class="form contact-message" id="contact-message" name="message" placeholder="Your Message" class="message" required></textarea>
-                    <button type="submit" class="blue-btn block-btn">Send</button>
+                    <button type="submit" id="form-btn" class="blue-btn block-btn form-btn">Send</button>
                 </form>
                 </div>
                 <div class="right-content">
@@ -245,10 +245,12 @@
     </main>
 
     <footer>
-        <div class="container blue fit-content"><div class="right-content"> 
-            <p class="footer-text">&copy; 2024 <span>GuardianMind LLC.</span> All rights reserved.</p></div>
-            <p class="footer-text">Contact Us: team@guardedmind.com</p>
-            <div class="left-content"><a class="citation "href="https://storyset.com/technology">Technology illustrations by Storyset</a></div></div>
+        <div class="container blue fit-content footer-fullscreen footer-container">
+            <div class="right-content footer-info"> 
+            <div class="footer-text">Contact Us: team@guardedmind.com</div>
+            <div class="footer-text"> &copy; 2024 <span>GuardianMind LLC.</span> All rights reserved.</div>
+            </div>
+            <div class="left-content footer-text"><a class="citation "href="https://storyset.com/technology">Technology illustrations by Storyset</a></div></div>
         </div>
     </footer>
 
