@@ -48,8 +48,8 @@
                     <li class="nav-item"><a href="#about">About</a></li>
                     <li class="nav-item"><a href="#products">Products</a></li>
                     <li class="nav-item"><a href="#">Resources</a></li>
-                    <li class="nav-item nav-blue-btn nav-btn"><a href="#contact">Join Mailing List</a></li>
-                    <li class="nav-item nav-yellow-btn nav-btn"><a href="#products">Pre-Order</a></li>
+                    <li class=" nav-blue-btn nav-btn"><a href="#contact" class="dark-link">Join Mailing List</a></li>
+                    <li class="nav-yellow-btn nav-btn"><a href="#products">Pre-Order</a></li>
                 </ul>
             </nav>
         </div>
@@ -58,10 +58,10 @@
     <!-- Mobile Menu -->
 <nav class="mobile-menu" id="mobileMenu">
     <ul class="nav-list">
-        <li class="nav-item"><a href="#about" onclick="menuRemove()">About</a></li>
+        <li class="nav-item"><a href="#about" onclick="menuRemove()" class="nav-item">About</a></li>
         <li class="nav-item"><a href="#products" onclick="menuRemove()">Products</a></li>
         <li class="nav-item"><a href="#" onclick="menuRemove()">Resources</a></li>
-        <li class="nav-item nav-blue-btn block-btn nav-btn"><a id="nav-join-mailing-list" href="#contact" onclick="joinMailingList(), menuRemove()">Join Mailing List</a></li>
+        <li class="nav-item nav-blue-btn block-btn nav-btn"><a href="#contact" onclick="joinMailingList(), menuRemove()">Join Mailing List</a></li>
         <li class="nav-item nav-yellow-btn block-btn nav-btn"><a href="#products" onclick="menuRemove()">Pre-Order</a></li>
     </ul>
 </nav>
@@ -77,7 +77,7 @@
                     <a class="yellow-btn" href="#products">Pre-Order</a>
                 </div>
                 <div class="right-content">
-                    <img class="hero-image" src="images/hero.png" alt="A Laptop">
+                    <img class="hero-image" src="images/hero-monitor.png" alt="A Laptop">
                 </div>
             </div>
         </section>
@@ -104,9 +104,8 @@
         <!-- Tansition Section -->
         <section>
             <div class="container blue fit-content">
-                <div class="text">In this day in age, it’s a high risk to look the other way and hope for the best.</div>
+                <div class="text">In this day in age, it’s a high risk to look the other way and hope for the best...That’s why we build  GuardedMind Accountability Laptops.</div>
                 <br>
-                <div class="text">That’s why we build  GuardedMind Accountability Laptops.</div>
             </div>
         </section>
 
@@ -165,8 +164,8 @@
 
         <!-- Paragraph Section -->
         <section id="paragraph">
-            <div class="container blue">
-                <p>At GuardedMind, we know how heartbreaking it is to desperately want to protect your kids, but feel like the entire world is working against you in this pursuit. Tech, social media, and porn companies are all gained up to exploit your children as much as possible  even from a young age. Accountability software has easy workarounds, and devices with reliable parental controls are nearly impossible to find, leaving you to feel helpless. We believe innocent minds deserve our best protection, that’s why we built the GuardedMind Accountability Laptop. All you need to do is order it, quickly set up your accounts, then breathe a sigh of relif as you never have to wonder what is happening on your child’s screen. So order today so you no longer have worry and can now have the peace of knowing your child is safe online. </p>
+            <div class="container blue paragraph">
+                <p class="paragraph">At GuardedMind, we know how heartbreaking it is to desperately want to protect your kids, but feel like the entire world is working against you in this pursuit. Tech, social media, and porn companies are all gained up to exploit your children as much as possible  even from a young age. Accountability software has easy workarounds, and devices with reliable parental controls are nearly impossible to find, leaving you to feel helpless. We believe innocent minds deserve our best protection, that’s why we built the GuardedMind Accountability Laptop. All you need to do is order it, quickly set up your accounts, then breathe a sigh of relif as you never have to wonder what is happening on your child’s screen. So order today so you no longer have worry and can now have the peace of knowing your child is safe online. </p>
             </div>
         </section>
 
@@ -175,37 +174,43 @@
             <div class="container white">
                 <h2>GuardedMind Accountability Laptops</h2>
                 <div class="card-container">
-                    <div class="card">
-                        <!-- <img src="#" alt="Budget Model"> -->
-                        <h4>Budget Model</h4>
-                        <ul class="description">
-                            <li>Refurbished Chrome Book with Protective Software</li>
-                            <li>Great for School Use</li>
-                        </ul>
+                    <div class="card product-card">
+                        <div class="upper-content">
+                            <!-- <img src="#" alt="Budget Model"> -->
+                            <h4>Budget Model</h4>
+                            <ul class="description">
+                                <li>Refurbished Chrome Book with Protective Software</li>
+                                <li>Great for School Use</li>
+                            </ul>
+                        </div>
                         <div class="button-box">
                             <a href="#how-it-works" class="blue-btn">Learn More</a>
                             <a href="order.html" class="yellow-btn">Pre-Order</a>
                         </div>
                     </div>
-                    <div class="card">
-                        <!-- <img src="#" alt="Standard Model"> -->
-                        <h4>Standard Model</h4>
-                        <ul class="description">
-                            <li>New Chrome Book with Protective Software</li>
-                            <li>Great for school use</li>
-                        </ul>
+                    <div class="card product-card">
+                        <div class="upper-content">
+                            <!-- <img src="#" alt="Standard Model"> -->
+                            <h4>Standard Model</h4>
+                            <ul class="description">
+                                <li>New Chrome Book with Protective Software</li>
+                                <li>Great for school use</li>
+                            </ul>
+                        </div>
                         <div class="button-box">
                             <a href="#how-it-works" class="blue-btn">Learn More</a>
                             <a href="order.html" class="yellow-btn">Pre-Order</a>
                         </div>
                     </div>
-                    <div class="card">
-                        <!-- <img src="#" alt="Specialized Model"> -->
-                        <h4>Specialized Model</h4>
-                        <ul class="description">
-                            <li>High-performance laptop with Protective Software</li>
-                            <li>Great for kids who need performance computing capabilites</li>
+                    <div class="card product-card">
+                        <div class="upper-content">
+                            <!-- <img src="#" alt="Specialized Model"> -->
+                            <h4>Specialized Model</h4>
+                            <ul class="description">
+                                <li>High-performance laptop with Protective Software</li>
+                                <li>Great for kids who need performance computing capabilites</li>
                         </ul>
+                        </div>
                         <div class="button-box">
                             <a href="#how-it-works" class="blue-btn">Learn More</a>
                             <a href="order.html" class="yellow-btn">Pre-Order</a>

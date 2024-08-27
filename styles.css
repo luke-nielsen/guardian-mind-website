@@ -66,6 +66,10 @@ footer {
     margin-top: 30px;
 }
 
+.paragraph {
+    line-height: 1.7;
+}
+
 /* Module */
 
 .card {
@@ -75,6 +79,12 @@ footer {
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0px;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .blue-btn {
@@ -148,11 +158,11 @@ footer {
 
 /* State */
 
-.blue-btn:hover {
+.nav-blue-btn:hover, .blue-btn:hover {
     background-color: #0056b3; /* Darker shade of primary color on hover */
   }
 
-.yellow-btn:hover {
+.nav-yellow-btn:hover, .yellow-btn:hover {
     background-color: #D9A628;
 }
 
@@ -257,20 +267,16 @@ footer {
 }
 
 .nav-item a:hover{
-    color: #0056b3;
+    color: #043873;
 }
 
-nav-btn a:hover{
-    color: #fff;
-}
-
-#nav-join-mailing-list:hover {
+.nav-btn a:hover{
     color: white;
 }
+
 .nav-bar {
     padding-right: 30px;
 }
-
 
 /* nav state */
 .regular-menu {
@@ -402,6 +408,20 @@ nav-btn a:hover{
 
     .mobile-menu.active {
         display: none; /* Show mobile menu when active */
+    }
+
+    .nav-item a:hover{
+        color: #4F9CF9;
+    }
+
+
+    .nav-btn {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-btn:hover {
+        color: white;
     }
 
     /* Theme */
