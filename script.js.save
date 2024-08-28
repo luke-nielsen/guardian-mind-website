@@ -1,0 +1,50 @@
+const mobileMenu = document.getElementById('mobileMenu');
+
+function toggleMenu() {
+    mobileMenu.classList.toggle('active');
+}
+
+function menuRemove() {
+    mobileMenu.classList.remove('active');
+  }
+
+  function navigateHome() {
+
+  }
+
+function joinMailingList() {
+    var textarea = document.getElementById('contact-message');
+    textarea.placeholder = 'I want to join the mailing list!';
+  }
+
+  window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('joinMailingList') === 'true') {
+        joinMailingList();
+    }
+<<<<<<< HEAD
+}
+
+// document.getElementById('contact-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     alert("Thank you for your message!");
+// });
+
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    const navList = document.getElementById('nav-links');
+    navList.classList.toggle('active');
+});
+
+document.getElementById('nav-links').addEventListener('click', function() {
+    const navList = document.getElementById('nav-links');
+    navList.classList.toggle('active')
+});
+
+document.getElementById('donate-logo').addEventListener('click', goToHomePage())
+
+// document.getElementById('contact-nav-link').addEventListener('click', joinMailingList())
+
+// document.getElementById('donate-nav-link').addEventListener('click', goToDonatePage())
+=======
+}
+>>>>>>> feature
