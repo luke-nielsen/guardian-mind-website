@@ -33,19 +33,55 @@
 <body>
 
     <header>
-        <div class="container">
-            <div class="logo"><a class="logo" href="index.html#hero">GuardedMind</a></div>
-            <h2 class="white-text pre-order-text">Thanks for your interest in pre-ordering! We are currently in the process of setting up this process. Join our mailing list to receive updates!</h2>
-            <a class="blue-btn" href="index.html?joinMailingList=true#contact">Join Mailing List</a>
-            
+         <!-- Nav Bar -->
+         <div class="nav-container">
+            <div class="logo-element"><a class="logo" href="index.html#hero"><img class="logo" src="/images/screenpigeonlogo3.png" alt="screenpigeon logo"></a></div>
+            <nav class="nav-bar">
+                <!-- Hamburger Icon -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="regular-menu nav-list">
+                    <li class="nav-item"><a href="index.html#about">About</a></li>
+                    <li class="nav-item"><a href="index.html#products">Products</a></li>
+                    <li class="nav-item"><a href="#">Resources</a></li>
+                    <li class=" nav-blue-btn nav-btn"><a href="index.html#contact" class="dark-link">Join Mailing List</a></li>
+                    <li class="nav-yellow-btn nav-btn"><a href="index.html#products">Order</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-    <section></section>
+    <!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="index.html#about" onclick="menuRemove()" class="nav-item">About</a></li>
+        <li class="nav-item"><a href="#index.htmlproducts" onclick="menuRemove()">Products</a></li>
+        <li class="nav-item"><a href="#" onclick="menuRemove()">Resources</a></li>
+        <li class="nav-item nav-blue-btn block-btn nav-btn"><a href="#index.htmlcontact" onclick="joinMailingList(), menuRemove()">Join Mailing List</a></li>
+        <li class="nav-item nav-yellow-btn block-btn nav-btn"><a href="index.html#products" onclick="menuRemove()">Order</a></li>
+    </ul>
+</nav>
+
+    </header>
+
+    <section>
+        <div class="container white full-length-section order-container">
+            <h3 class="pre-order-text">Fill out the form below and one of our team members will reach out to you:</h3>
+            <form id="contact-form" class="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
+                <input class="form" id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
+                <input class="form" id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
+                <textarea class="form contact-message" id="contact-message" name="message" placeholder="I'm interested in ordering a laptop!" class="message" required></textarea>
+                <button type="submit" id="form-btn" class="blue-btn block-btn form-btn">Send</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="container blue fit-content">
-            <div class="right-content"> <p class="footer-text">&copy; 2024 <span>GuardianMind LLC.</span> All rights reserved.</p></div>
-            <div class="left-content"><a class="citation "href="https://storyset.com/technology">Technology illustrations by Storyset</a></div></div>
+            <div class="right-content"> <p class="footer-text">&copy; 2024 Screen Pigeon. All rights reserved.</p></div>
         </div>
     </footer>
 

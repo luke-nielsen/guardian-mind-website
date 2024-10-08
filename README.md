@@ -1,6 +1,6 @@
-# Guardian Mind Website
+# Screen Pigeon Website
 
-Welcome to the Guardian Mind website repository! This repository contains the files for our static site, which is designed to provide information about our services and facilitate online donations.
+Welcome to the Screen Pigeon website repository! This repository contains the files for our static site, which is designed to provide information about our services and facilitate online donations.
 
 ## Directory Structure
 
