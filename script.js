@@ -40,3 +40,29 @@ function joinMailingList() {
       observer.observe(element);
     });
   });
+
+  document.getElementById("why-stripe").addEventListener("click", function(){
+    var stripeInfo = document.getElementsByClassName("stripe-info")[0]; // Target the first element in the collection
+    if (stripeInfo) { // Check if the element exists
+        stripeInfo.classList.toggle("hidden-section");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const questions = document.querySelectorAll(".order-faqs h3");
+
+  questions.forEach(question => {
+      question.addEventListener("click", function () {
+          const answer = this.nextElementSibling;
+
+          // Toggle the display of the answer
+          if (answer.style.display === "none" || answer.style.display === "") {
+              answer.style.display = "block";
+              this.classList.add("active");
+          } else {
+              answer.style.display = "none";
+              this.classList.remove("active");
+          }
+      });
+  });
+});

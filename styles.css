@@ -18,6 +18,11 @@ h1, h2, h3 {
 
 a {
     text-decoration: none;
+    color:#166ecb;
+}
+
+a:hover {
+    font-weight: 510;
 }
 
 img {
@@ -55,15 +60,18 @@ p {
     padding: 30px 20px;
 }
 
-.order-container {
-    margin-top: 60px;
-}
-
 .small-container {
     padding: 10px 20px 1px 20px;
     margin-bottom: none;
 }
 
+.text-header {
+    margin-top: 30px;
+}
+
+.text-container {
+    margin-top: 100px;
+}
 
 header {
     background-color: #2C425B;
@@ -220,6 +228,30 @@ footer {
 
 .pre-order-text {
     margin-top: 60px;
+}
+
+.stripe-btn {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.about-checkout {
+    margin-top: 20px;
+}
+.hidden-section {
+    display: none;
+}
+
+.text-box {
+    width: 50vw;
+    
 }
 
 .sub-title {
@@ -418,6 +450,11 @@ footer {
     display: block; /* Show mobile menu when active */
 }
 
+/* Order FAQs */
+
+.order-faqs {
+    margin-top: 25px;
+}
 
 @media (min-width: 768px) { 
 
@@ -649,6 +686,10 @@ footer {
         padding: 60px 80px 60px 80px;
     }
 
+    .text-container {
+        padding: 60px 150px 60px 150px;
+    }
+
     .footer-container {
     padding: 40px 80px; 
     padding-top: none;
@@ -755,6 +796,11 @@ footer {
         line-height: 1.0;
      }
     /* Layout */
+
+    .text-container {
+        padding: 60px 180px 60px 180px;
+    }
+
     /* Module */
 
     .hero-image {

@@ -70,24 +70,15 @@
     <section>
         <div class="container text-container white">
             <a href="index.html#products">Back</a>
-            <h2 class="text-header">Order FAQ's</h2>
-            <h3>Do you have a Privacy Policy and Terms of Service? <span class="icon"></span></h3>
-            <p>Yes. By ordering, you agree to our <a href="tos.html">Terms of Service</a> and <a href="privacy-policy.html">Privacy Policy</a>.</p>
-            <h3>Why do you use Stripe to handle payments?</h3>
-            <p>As a startup, using Stripe ensures a more secure and reliable payment process. By partnering with a trusted third-party provider, we can focus on building a great product without the added complexity of developing and maintaining our own secure payment infrastructure.</p>
-            <h3>Why does the Stripe payment page show 'Blooco Inc.'?</h3>
-            <p>Currently, ScreenPigeon is a product under Blooco Inc., our development company. As a startup, we're operating this way for now, but we plan to establish ScreenPigeon as its own standalone company in the future.</p>
-            <h3>How long will deliveries take?</h3>
-            <p>Orders are typically delivered within 1-2 weeks using our standard delivery service. While we strive to ensure timely arrivals, please note that delivery times can vary depending on your location and local postal conditions. We will keep you updated with tracking information once your order has been dispatched.</p>
-            <h3>Does Screen Pigeon offer Free Shipping?</h3>
-            <p>Yes. Screen Pigeon provides free shipping on all orders. We are committed to ensuring a seamless and cost-effective shopping experience for our customers.</p>
-            <h3>Do Screen Pigeon have a money-back Guarentee?</h3>
-            <p>Yes! We offer a 30-day money-back guarantee on all our products. If you're not completely satisfied with your purchase, simply return it within 30 days for a full refund. Plus, ScreenPigeon will cover the delivery costs.</p>
-            <h3>ScreenPigeon was founded in 2024; how do I know it's a legitimate company?</h3>
-            <p>We understand that trust is important, especially with new companies. That's why we offer the opportunity for anyone to schedule a call with our CEO, who would be happy to personally address any concerns you may have 😀. Contact Luke at <a href="mailto:luke@screenpigeon.io">luke@screenpigeon.io</a>.</p>
+            <h3 class="text-header">Fill out this form and one of our team members will contact you:</h3>
+            <form id="contact-form" class="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
+            <input class="form" id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
+            <input class="form" id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
+            <textarea class="form contact-message" id="contact-message" name="message" placeholder="I want to pre-order the performance laptop!" class="message" required></textarea>
+            <button type="submit" id="form-btn" class="blue-btn block-btn form-btn">Send</button>
+        </form>
         </div>
     </section>
-
 
     <footer>
         <div class="container blue fit-content">
