@@ -59,8 +59,8 @@
                 <ul class="regular-menu nav-list">
                     <li class="nav-item"><a href="#about">About</a></li>
                     <li class="nav-item"><a href="#products">Products</a></li>
-                    <li class="nav-item"><a href="#">Resources</a></li>
-                    <li class=" nav-blue-btn nav-btn"><a href="#contact" class="dark-link">Join Mailing List</a></li>
+                    <li class="nav-item"><a href="faqs.html">FAQ's</a></li>
+                    <li class=" nav-blue-btn nav-btn"><a href="#contact" class="dark-link" onclick="joinMailingList()">Join Mailing List</a></li>
                     <li class="nav-yellow-btn nav-btn"><a href="#products">Order</a></li>
                 </ul>
             </nav>
@@ -72,7 +72,7 @@
     <ul class="nav-list">
         <li class="nav-item"><a href="#about" onclick="menuRemove()" class="nav-item">About</a></li>
         <li class="nav-item"><a href="#products" onclick="menuRemove()">Products</a></li>
-        <li class="nav-item"><a href="#" onclick="menuRemove()">Resources</a></li>
+        <li class="nav-item"><a href="#" onclick="menuRemove()">FAQ's</a></li>
         <li class="nav-item nav-blue-btn block-btn nav-btn"><a href="#contact" onclick="joinMailingList(), menuRemove()">Join Mailing List</a></li>
         <li class="nav-item nav-yellow-btn block-btn nav-btn"><a href="#products" onclick="menuRemove()">Order</a></li>
     </ul>
@@ -204,7 +204,7 @@
                     <!-- card container -->
                     <div class="product-card falling-element">
                         <div class="upper-content">
-                            <img class="card-image" src="images/product-laptop.jpg" alt="Laptop">
+                            <img class="card-image" src="images/splaptop5.jpg" alt="Laptop">
                             <!-- <img src="#" alt="Standard Model"> -->
                             <div class="card-heading">$580.00</div>
                             <div class="card-text">Standard Model</div>
@@ -217,12 +217,11 @@
                             <!-- <a href="#how-it-works" class="blue-btn">Learn More</a> -->
                             <a href="https://buy.stripe.com/8wMdSR41ndA45Wg3cc" class="yellow-btn">Order</a>
                         </div>
-                        <a href="order.html" target="_blank" class="about-checkout" >Order FAQ's</a>
+                        <a href="order-faqs.html" target="_blank" class="about-checkout" >Order FAQ's</a>
                     </div>
-                    <div class="product-card falling-element">
+                    <!-- <div class="product-card falling-element">
                         <div class="upper-content">
                             <img class="card-image" src="images/product-laptop.jpg" alt="Laptop">
-                            <!-- <img src="#" alt="Specialized Model"> -->
                             <div class="card-heading">$929.78</div>
                             <div class="card-text">Performance Model</div>
                             <ul class="description">
@@ -231,10 +230,9 @@
                         </ul>
                         </div>
                         <div class="button-box">
-                            <!-- <a href="#how-it-works" class="blue-btn">Learn More</a> -->
                             <a href="pre-order.html" class="yellow-btn">Pre-Order</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -253,12 +251,20 @@
                 <div class="left-content falling-element">
                     <h2>Contact Us</h2>
                     <p>Feel free to reach out. We love to hear from you!</p>
-                    <form id="contact-form" class="contact-form" action ="https://formspree.io/f/xvgpznzo" method="POST">
-                    <input class="form" id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
-                    <input class="form" id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
-                    <textarea class="form contact-message" id="contact-message" name="message" placeholder="Your Message" class="message" required></textarea>
-                    <button type="submit" id="form-btn" class="blue-btn block-btn form-btn">Send</button>
-                </form>
+                    <div id="success-message" style="display: none; color: rgb(54, 126, 54); margin-top: 10px;">
+                        Your message has been sent successfully!
+                      </div>
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvgpznzo" method="POST">
+                        <input class="form" id="contact-name" type="text" name="name" placeholder="Your Name" class="input" required>
+                        <input class="form" id="contact-email" type="email" name="email" placeholder="Your Email" class="input" required>
+                        <textarea class="form contact-message" id="contact-message" name="message" placeholder="Your Message" class="message" required></textarea>
+                        <div class="checkbox-container">
+                          <input type="checkbox" id="mailing-list" name="mailing-list" class="mailing-list-checkbox">
+                          <label for="mailing-list">Join our mailing list</label>
+                        </div>
+                        <button type="submit" id="form-btn" class="blue-btn block-btn form-btn">Send</button>
+                      </form>
+                      
                 </div>
                 <div class="right-content">
                     <img class="content-image" src="images/pigeonphone3.webp" alt="A man talking on the phone">
@@ -271,7 +277,13 @@
     <footer>
         <div class="container blue fit-content footer-fullscreen footer-container">
             <div class="right-content footer-info"> 
-            <div class="footer-text"> &copy; 2024 <span>ScreenPigeon.</span> All rights reserved.</div>
+            <div> &copy; 2024 <span>ScreenPigeon.</span> All rights reserved.</div>
+            </div>
+            <div class="left-content">
+                <div class="column">
+                    <a href="tos.html" class="white-text footer-link">Terms of Service</a>
+                    <a href="privacy-policy.html" class="white-text footer-link">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>

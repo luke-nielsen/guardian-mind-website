@@ -116,6 +116,11 @@ footer {
     min-height: 90vh;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Module */
 
 .card {
@@ -269,6 +274,17 @@ footer {
     padding: 10px;
     font-family: "Lato", sans-serif;
 
+}
+
+input[type="checkbox"] {
+    transform: scale(1.6);
+    margin-right: 10px;
+  }
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .contact-message {
@@ -655,7 +671,7 @@ footer {
     /* Base */
 
     body {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     h1 {
@@ -665,7 +681,7 @@ footer {
     }
 
     h2 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     img {
@@ -674,7 +690,7 @@ footer {
 
     input, textarea, select {
         max-width: 550px;
-        font-size: 20px;
+        font-size: 18px;
         border: none;
         padding: 16px;
         font-family: "Plus Jakarta Sans", sans-serif;;
@@ -781,7 +797,7 @@ footer {
       }
 
       .sub-title {
-       font-size: 25px;
+       font-size: 23px;
        margin: 15px 0;
     }
 
@@ -792,9 +808,14 @@ footer {
      /* Base */
 
      h1 {
-        font-size: 110px;
+        font-size: 100px;
         line-height: 1.0;
      }
+
+     img {
+        max-width: 35vw;
+    }
+
     /* Layout */
 
     .text-container {
