@@ -35,23 +35,6 @@ function menuRemove() {
     });
   });
 
-// function setBackLinks() {
-//   const previousPage = document.referrer;
-
-//   const backLinks = document.querySelectorAll(".backLink");
-
-//   backLinks.forEach(link => {
-//       if (previousPage) {
-//           link.href = previousPage;
-//       } else {
-//           link.addEventListener("click", function(event) {
-//               event.preventDefault();
-//               window.history.back(); 
-//           });
-//       }
-//   });
-// }
-
 // Submitting "Contact Us Form"
 document.addEventListener("DOMContentLoaded", setBackLinks);
 
